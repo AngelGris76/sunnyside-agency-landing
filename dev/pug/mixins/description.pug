@@ -1,17 +1,21 @@
 mixin description(desc)
     - var extraTitleClass= ""
     - var extraParagraphClass= ""
-    - var extraClass= ""
+    //- - var extraClass= ""
+    - var textExtraClass= ""
+    - var extraClass= ` description--${desc.extra}`
     if !desc.haveLink
+        - var textExtraClass= ` description__text--cover`
         - var extraTitleClass= " description__title--cover"
         - var extraParagraphClass=" description__paragraph--cover"
-        - var extraClass= ` description--${desc.extra}`
     section(class= `description${extraClass}`)
-        h2(class= `description__title${extraTitleClass}`)= desc.title
-        p(class= `description__paragraph${extraParagraphClass}`)= desc.paragraph
-        if desc.haveLink
-            if desc.pink 
-                - var modifier= " description__link--pink"
-            else 
-                - var modifier= ""
-            a(class=`description__link${modifier}` href="#") learn more 
+        img(class="description__image" src=`assets/images/desktop/image-${desc.image}.jpg`, alt="", srcset=`assets/images/mobile/image-${desc.image}.jpg 2x`)
+        div(class= `description__text${textExtraClass}`)
+            h2(class= `description__title${extraTitleClass}`)= desc.    title
+            p(class= `description__paragraph${extraParagraphClass}`)=   desc.paragraph
+            if desc.haveLink
+                if desc.pink 
+                    - var modifier= " description__link--pink"
+                else 
+                    - var modifier= ""
+                a(class=`description__link${modifier}` href="#") learn  more 

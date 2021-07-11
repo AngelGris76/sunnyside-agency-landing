@@ -1,5 +1,9 @@
 @mixin description-card($number, $image) {
   .description:nth-child(#{$number}) {
     background-image: url("../assets/images/mobile/image-#{$image}.jpg");
+
+    @media screen and (min-width: 1024px) {
+      background-image: url("../assets/images/desktop/image-#{$image}.jpg");
+    }
   }
 }

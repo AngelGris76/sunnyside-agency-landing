@@ -3,5 +3,6 @@
 
 section.testimonials-container
     h2.client-title client testimonials
-    each user in users 
-        +testimonial(user)
+    .card-container
+        each user in users 
+            +testimonial(user)

@@ -6,16 +6,20 @@
 @use 'components/card';
 @use 'layout/footer';
 
-@include description.description-card(1, "transform");
+/* @include description.description-card(1, "transform");
 @include description.description-card(2, "stand-out");
 @include description.description-card(3, "graphic-design");
-@include description.description-card(4, "photography");
+@include description.description-card(4, "photography"); */
 
 .testimonials-container {
   text-align: center;
   color: var(--Grayish-blue);
   padding-top: 3em;
   padding-bottom: 4.1em;
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 8em;
+  }
 }
 
 .client-title {
@@ -23,6 +27,23 @@
   font-size: 0.9rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 1.1rem;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    padding-top: 1em;
+    padding-bottom: 4.2em;
+  }
 }
 
 .gallery {
