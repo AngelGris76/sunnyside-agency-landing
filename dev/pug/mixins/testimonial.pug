@@ -1,0 +1,6 @@
+mixin testimonial(user)
+    article.card 
+        img.card__img(src=`assets/images/image-${user.name.toLowerCase()}.jpg`, alt=`${user.name} ${user.lastName}`)
+        p.card__testimonial= user.testimonial
+        p.card__user= `${user.name} ${user.lastName}.`
+        p.card__profession= user.profession

@@ -1,0 +1,92 @@
+@forward '../mixins/description-card';
+
+.description-container {
+  text-align: center;
+  @media screen and (min-width: 1024px) {
+    text-align: left;
+  }
+}
+
+.description {
+  padding-top: 93vw;
+  padding-bottom: 16vw;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: var(--Dark-grayish-blue);
+
+  &__title {
+    font-size: 1.85rem;
+    font-weight: 900;
+    color: var(--Very-dark-desaturated-blue);
+
+    &--cover {
+      font-size: 1.5rem;
+      color: inherit;
+      margin-bottom: 1.2em;
+    }
+  }
+
+  &__paragraph {
+    font-family: "Barlow", sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.67;
+    margin-bottom: 0;
+    padding-bottom: 2em;
+
+    &--cover {
+      font-size: 0.9rem;
+    }
+  }
+
+  &--graphic-design,
+  &--photography {
+    background-size: cover;
+    padding-top: 100vw;
+    padding-bottom: 6vw;
+
+    @media screen and (min-width: 1024px) {
+      text-align: center;
+    }
+  }
+
+  &--graphic-design {
+    color: var(--Dark-desaturated-cyan);
+  }
+
+  &--photography {
+    color: var(--Dark-blue);
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 0.92rem;
+    font-weight: 900;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 138px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: var(--Yellow);
+      opacity: 30%;
+      top: 13px;
+      left: -9px;
+      z-index: -1;
+    }
+
+    &--pink::before {
+      background-color: var(--Soft-red);
+    }
+
+    @media screen and (min-width: 1280px) {
+      &:hover::before {
+        opacity: 100%;
+      }
+    }
+  }
+}

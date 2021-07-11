@@ -1,0 +1,5 @@
+@mixin description-card($number, $image) {
+  .description:nth-child(#{$number}) {
+    background-image: url("../assets/images/mobile/image-#{$image}.jpg");
+  }
+}

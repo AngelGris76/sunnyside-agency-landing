@@ -1,0 +1,37 @@
+.footer {
+  background-color: var(--Dark-moderate-cyan);
+  font-family: "Barlow", sans-serif;
+  padding-top: 3.5em;
+  padding-bottom: 1.5em;
+
+  &__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 172px;
+    filter: invert(1) opacity(0.5);
+  }
+}
+
+.sitemap,
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2.45em;
+  padding-bottom: 2.45em;
+}
+
+.sitemap {
+  width: 300px;
+
+  &__link {
+    color: var(--Dark-desaturated-cyan);
+  }
+}
+
+.socials {
+  width: 200px;
+}

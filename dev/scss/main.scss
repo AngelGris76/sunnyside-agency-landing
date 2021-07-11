@@ -1,0 +1,41 @@
+@use 'base';
+@use 'layout/header';
+@use 'components/button';
+@use 'layout/main-menu';
+@use 'components/description';
+@use 'components/card';
+@use 'layout/footer';
+
+@include description.description-card(1, "transform");
+@include description.description-card(2, "stand-out");
+@include description.description-card(3, "graphic-design");
+@include description.description-card(4, "photography");
+
+.testimonials-container {
+  text-align: center;
+  color: var(--Grayish-blue);
+  padding-top: 3em;
+  padding-bottom: 4.1em;
+}
+
+.client-title {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+
+.gallery {
+  background-color: blue;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

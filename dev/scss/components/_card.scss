@@ -1,0 +1,29 @@
+.card {
+  font-family: "Barlow", sans-serif;
+  padding: 0 1em;
+  //color: var(--Dark-grayish-blue);
+  //margin-top: 3.8em;
+  padding-top: 2.5em;
+
+  &__img {
+    width: 72px;
+    border-radius: 50%;
+  }
+
+  &__testimonial {
+    color: var(--Very-dark-grayish-blue);
+    line-height: 1.88;
+    margin-top: 1.7em;
+    margin-bottom: 1.8em;
+  }
+
+  &__user {
+    font-family: "Fraunces", serif;
+    color: var(--Very-dark-desaturated-blue);
+    margin-bottom: 0;
+  }
+
+  &__profession {
+    font-size: 0.8rem;
+  }
+}

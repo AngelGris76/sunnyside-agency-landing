@@ -1,0 +1,7 @@
+- const users = [{name: "Emily", lastName: "R", testimonial: "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.", profession: "Marketing Director"},{name: "Thomas", lastName: "S", testimonial: "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.", profession: "Chief Operating Officer"},{name: "Jennie", lastName: "F", testimonial: "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!", profession: "Business Owner"}]
+
+
+section.testimonials-container
+    h2.client-title client testimonials
+    each user in users 
+        +testimonial(user)
