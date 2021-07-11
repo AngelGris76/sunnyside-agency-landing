@@ -19,12 +19,13 @@ html(lang="en")
         link(rel="stylesheet", href="css/styles.css")
     body 
         include sections/header
-        include sections/description-section
-        include sections/testimonials-section
-        .gallery
-            +image("milkbottles")
-            +image("orange")
-            +image("cone")
-            +image("sugar-cubes")
+        main.main-content
+            include sections/description-section
+            include sections/testimonials-section
+            .gallery
+                +image("milkbottles")
+                +image("orange")
+                +image("cone")
+                +image("sugar-cubes")
         include sections/footer
         script(src="js/scripts.js") 
