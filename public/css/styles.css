@@ -366,10 +366,6 @@ body {
   width: 200px;
 }
 
-/* @include description.description-card(1, "transform");
-@include description.description-card(2, "stand-out");
-@include description.description-card(3, "graphic-design");
-@include description.description-card(4, "photography"); */
 .testimonials-container {
   text-align: center;
   color: var(--Grayish-blue);
